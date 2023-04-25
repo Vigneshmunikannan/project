@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+  }
+header img{
+    width: 140px;
+}
+header{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+nav{
+    display: flex;
+    align-items: center;
+}
+nav ul li{
+    display: inline-block;
+    margin: 10px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+nav ul li a:hover{
+   color: #ff00ee;
+}
+/*----------------------h3----------------*/
+h3{
+   text-align: center;
+   font-size: x-large;
+   animation: color-change 1s infinite;
+}
+@keyframes color-change{
+    50% {color: rgb(203, 194, 194);}
+    50% {color:#ff00ee}
+}
+/*-------------------contact---------------*/
+#contact{
+ width: 100%;
+}
+form{
+   margin-left: 10%;
+   margin-right: 10%;
+   margin-top: 10%;
+}
+.h{
+    margin-left: 40%;
+    font-size: 50px;
+    font-weight: 1000px;
+    margin-right: 25%;
+    animation: color-change 1s infinite;
+}
+@keyframes color-change{
+    50% {color: rgb(203, 194, 194);}
+    50% {color:#ff00ee}
+}
+
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    padding: 15px;
+    margin: 15px 0;
+    background-color: #efa3cf;
+    color:#fff;
+    font-size: 18px;
+    border-radius: 6px;
+
+}
+.btn{
+    display: block;
+    margin: 25px auto;
+    width: fit-content;
+    border: 1px solid #e1e1e1;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    background-color:#ff00ee;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.copy{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 100%;
+    background-color:#ff00ee;
+    font-weight: 300;
+    color: #fff;
+    margin-top: 15%;
+}
+#msg{
+    margin-left:500px;
+    color:#61b752;
+    display: block;
+}
+/*-----------------About----------------*/
+.ah{
+    margin-left: 320px;
+    margin-top: 20px;
+    animation: color-change 1s infinite;
+}
+@keyframes color-change{
+    50% {color: rgb(203, 194, 194);}
+    50% {color:#ff00ee}
+}
+.para{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 70px;
+    width:80%
+}
+.para ul li{
+        
+        list-style: none;
+        margin: 20px 40px;
+        font-size: 25px;
+        font-weight: 100000px;
+}
+/*-----------------terms--------------------*/
+.terms{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    font-size: large;
+}
+.terms h1,h2{
+    margin: 20px 0px;
+    color: #ff00ee;
+}
+/*------how---*/
+.how{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    font-size: large;
+}
+.how h1{
+    color: #ff00ee;
+    text-align: center;
+}
+/**** FAQ****/
+.faq{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    font-size: large;   
+}
+/**** download***/
+.al ul{
+    display: inline-block;
+    display: flex;
+    list-style: none;
+}
+.al ul img{
+    height: 150px;
+    width: 295px;
+    cursor: pointer;
+}
+/************ input**/
+#input{
+    position: absolute;
+    margin: -70px 350px;
+    width:500px
+}
+/**** show*/
+

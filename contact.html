@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Favicon/favicon-32x32.png" />
+  </head>
+  <body class="show">
+    <header>
+        <img src="Logo/logo.png" alt="logo" />
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="how.html">How to use</a></li>
+            <li><a href="terms.html">Terms of Use </a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+    <div class="contact">
+        <h1 class="h">
+            Contact Us
+        </h1>
+        <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn" onclick="data()">Submit</button>
+            <span id="msg"></span>
+        </form>
+        
+    </div>
+    <div class="copy">
+        Copyright © Students Sri Eshwar College of engineering
+    </div>
+    <script>
+      function data(){
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby_lCUIK0aWFitB9eR7DMzg8I1x6ptjfNKVd-SbkdTaZWipB46XpkGSMShGxRtd1f6A/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const msg=document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+        
+            .catch(error => console.error('Error!'))
+        })
+      }
+      </script>
+  </body>
+</html>
